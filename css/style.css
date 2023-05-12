@@ -61,7 +61,7 @@ main {
     width: 50px;
     height: 100%;
     background-color: var(--bgd-main-navbar);
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     bottom: 0;
@@ -75,7 +75,6 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    z-index: 1;
 }
 
 .main-nav p {
