@@ -13,44 +13,63 @@
 :root {
     --bgd-header: #080B12 ;
     --bgd-footer: #282828 ;
-    --bgd-navbar: #000000;
+    --bgd-main-navbar: #000000;
     --bgd-main: #141922;
+    --font-white: #FFFFFF;
+    --font-grey: #7D7F84;
 }
 
 /* Generics */
 body{
     font-family: 'Montserrat', sans-serif;
-    padding-bottom: 80px;
 }
 
 /* Utilities */
-.container {
-    /* max-width: 550px; */
+
+/* .container {
+    max-width: 550px;
     max-width: 100%;
     margin: 0 auto;
+} */
+
+.wrap {
+    padding-bottom: 100px;
+    padding-left: 60px;
 }
 
 .d-flex {
     display: flex;  
 }
 
-/* Debug */
-.debug .border {
-    border: 2px dashed black; 
-}
-
 img {
     max-width: 100%;
 }
 
+/* Debug */
+.debug .border {
+    border: 2px dashed white; 
+}
+
+/* main */
 main {
-    height: calc(100vh - 80px);
+    height: calc(100vh - 100px);
     overflow: auto;
+}
+
+/* main-nav */
+.main-nav {
+    width: 50px;
+    height: 100%;
+    background-color: var(--bgd-main-navbar);
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
 }
 
 /* Footer */
 footer {
-    height: 80px;
+    height: 90px;
     background-color: var(--bgd-footer);
     position: fixed;
     bottom: 0;
@@ -59,12 +78,21 @@ footer {
     z-index: 1;
 }
 
+.main-nav p {
+    color: white;
+}
 
  /************************************************
  RESPONSIVE S 576PX
  ************************************************/
  @media screen and (min-width: 576px) {
+ .main-nav {
+    width: 230px;
+ }
 
+ .wrap {
+    padding-left: 250px;
+}
  }
 
  /************************************************
