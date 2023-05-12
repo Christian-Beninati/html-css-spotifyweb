@@ -2,26 +2,31 @@
   XS 500PX
  ************************************************/
 
-/* css reset */
+/* Css reset */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* custom properties */
+/* Custom properties */
 :root {
-    --bgd-header: # ;
-    --bgd-footer: # ;
+    --bgd-header: #080B12 ;
+    --bgd-footer: #282828 ;
+    --bgd-navbar: #000000;
+    --bgd-main: #141922;
 }
 
-/* generics */
+/* Generics */
 body{
     font-family: 'Montserrat', sans-serif;
+    padding-bottom: 80px;
 }
 
-/* utilities */
+/* Utilities */
 .container {
+    /* max-width: 550px; */
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -29,20 +34,49 @@ body{
     display: flex;  
 }
 
+/* Debug */
 .debug .border {
     border: 2px dashed black; 
 }
 
+img {
+    max-width: 100%;
+}
+
+main {
+    height: calc(100vh - 80px);
+    overflow: auto;
+}
+
+/* Footer */
+footer {
+    height: 80px;
+    background-color: var(--bgd-footer);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
 
 
  /************************************************
  RESPONSIVE S 576PX
  ************************************************/
+ @media screen and (min-width: 576px) {
+
+ }
 
  /************************************************
  RESPONSIVE MD 768PX
  ************************************************/
+ @media screen and (min-width: 768px) {
+
+ }
 
  /************************************************
- RESPONSIVE LG 1200PX
+ RESPONSIVE LG 992PX
  ************************************************/
+ @media screen and (min-width: 992px) {
+
+ }
