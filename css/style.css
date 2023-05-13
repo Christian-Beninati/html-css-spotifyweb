@@ -13,7 +13,7 @@
 :root {
     --bgd-header: #080B12 ;
     --bgd-footer: #282828 ;
-    --bgd-main-navbar: #000000;
+    --bgd-sidebar: #000000;
     --bgd-main: #141922;
     --font-white: #FFFFFF;
     --font-grey: #7D7F84;
@@ -28,7 +28,6 @@ body{
 
 .wrap {
     padding-bottom: 100px;
-    padding-left: 60px;
 }
 
 
@@ -46,41 +45,15 @@ img {
 }
 
 /* main */
-.main-content {
-    height: calc(100vh - 100px);
-    overflow-y: auto;
+
+
+/* sidebar */
+.sidebar {
+  width: 50px;
+  height: 100vh;
+  background-color: var(--bgd-sidebar);
 }
 
-/* main-nav */
-.main-nav {
-    width: 50px;
-    height: 100vh;
-    background-color: var(--bgd-main-navbar);
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-}
-
-.call-to-action {
-    height: 90px;
-    background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-}
-
-.call-to-action::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* z-index: -1; */
-  }
 
 /* Footer */
 footer {
@@ -97,13 +70,9 @@ footer {
  RESPONSIVE S 576PX
  ************************************************/
  @media screen and (min-width: 576px) {
- .main-nav {
+ .sidebar {
     width: 230px;
  }
-
- .wrap {
-    padding-left: 250px;
-}
  }
 
  /************************************************
