@@ -17,6 +17,7 @@
     --bgd-main: #141922;
     --font-white: #FFFFFF;
     --font-grey: #BBBCBB;
+    --line-active: #ADFC2F;
 }
 
 /* Generics */
@@ -32,6 +33,10 @@ body{
 .d-flex-col {
     display: flex;  
     flex-direction: column;
+}
+
+.fl-wrap {
+  flex-wrap: wrap;
 }
 
 img {
@@ -60,6 +65,8 @@ a {
   flex: 0 0 50px;
    background-color: var(--bgd-sidebar);
    padding: 5px 10px;
+   font-size: 13px;
+   font-weight: 800;
 }
 
 .sidebar .small-logo img  {
@@ -74,11 +81,6 @@ a {
     padding-bottom: 5px;
   }
   
-  .sidebar li, a {
-    font-weight: 800;
-    font-size: 13px;
-  }
-
    .sidebar .icon, li, a  {
     color: var(--font-grey);
 
@@ -125,6 +127,7 @@ a {
   
   .playlist > p {
     font-weight: 600;
+    font-size: 15px;
   }
   .navigation.playlist .icon {
     font-size: 50px;
@@ -138,21 +141,21 @@ a {
     padding-bottom: 10px;
   }
 
- .line-icon {
+ .line-icon-active {
     position: relative;
   }
   
-  .line-icon::before {
+  .line-icon-active::before {
     content: '';
     position: absolute;
     left: -20px;
     height: 100%;
     width: 4px;
-    background-color: green; 
+    background-color: var(--line-active); 
   }
 
 /* Main  */
-.upper-content{
+.upper-content {
     background-color: var(--bgd-main);
     height: calc(100vh - 90px);
     flex: 1 1 auto;
@@ -172,25 +175,84 @@ a {
 .call-to-action {
    justify-content: flex-end;
    align-items: center;
-   padding-right: 40px;
+   padding-right: 30px;
 }
 
-.button .wh-button {
+.call-to-action .wh-button {
   color: var(--font-white);
   border: 1px solid white;
   padding: 10px 30px;
   border-radius: 20px;
 }
 
-
 .main-content {
    overflow: auto;
    flex: 1 1 auto;
 }
 
-p {
-    color: white;
-} 
+.container {
+  padding: 20px;
+}
+
+.main-nav ul {
+  justify-content: center;
+}
+
+.main-nav ul li {
+  padding: 20px 8px;
+}
+
+.main-nav a {
+  font-size: 12px;
+}
+
+.line-active {
+  position: relative;
+}
+
+.line-active::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  border-bottom: 2px solid var(--line-active);
+}
+
+.main-content h2 {
+  padding: 20px 0 ;
+  font-size: 21px;
+}
+
+.gallery {
+  text-align: center;
+  align-items: flex-start;
+}
+
+.playlist-gallery li{
+  flex-basis: 50%;
+  padding: 5px;
+}
+
+.main-content .subtitle {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--font-grey);
+}
+
+.playlist-gallery h4 {
+  color: var(--font-white);
+  font-size: 14px;
+}
+
+.subtitle.space {
+  padding-bottom: 20px;
+}
+
+.round-photos {
+  border-radius: 50%;
+}
 
 /* Footer */
 footer {
@@ -237,21 +299,29 @@ footer {
 .playlist {
     display: block;
 }
-
-  
- 
  }
 
  /************************************************
  RESPONSIVE MD 768PX
  ************************************************/
  @media screen and (min-width: 768px) {
-
+  .playlist-gallery li{
+    flex-basis: 25%;
+  }
+  .playlist-gallery h4 {
+    font-size: 13px;
+  }
  }
 
  /************************************************
  RESPONSIVE LG 992PX
  ************************************************/
  @media screen and (min-width: 992px) {
+  .playlist-gallery li{
+    flex-basis: calc(100% / 6);
+  }
 
+  .playlist-gallery h4 {
+    font-size: 10px;
+  }
  }
