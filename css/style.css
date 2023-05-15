@@ -22,7 +22,6 @@
 /* Generics */
 body{
     font-family: 'Montserrat', sans-serif;
-    background-color: var(--bgd-main);
 }
 
 /* Utilities */
@@ -39,6 +38,14 @@ img {
     max-width: 100%;
 }
 
+.ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 /* Debug */
 .debug .border {
     border: 2px dashed white; 
@@ -46,10 +53,8 @@ img {
 
 /* Sidebar */
 .sidebar {
-   height: calc(100vh - 90px);
-   flex-basis: 50px;
+  flex: 0 0 50px;
    background-color: var(--bgd-sidebar);
-   flex-shrink: 0;
    padding: 5px 10px;
 }
 
@@ -64,18 +69,18 @@ img {
     font-size: 28px;
     padding-bottom: 5px;
   }
-  .sidebar .navigation ul {
-    list-style: none;
-  }
- 
+  
   .sidebar li, a {
-    color: var(--font-grey);
-    text-decoration: none;
     font-weight: 800;
     font-size: 13px;
   }
-  .sidebar .navigation .icon {
+
+   .sidebar .icon, li, a  {
     color: var(--font-grey);
+
+   }
+
+  .sidebar .navigation .icon {
     margin-top: 5px;
   }
 
@@ -132,39 +137,36 @@ img {
 
 
 /* Main */
-#content {
-    width: calc(100% - 50px);
-    position: relative;
+.upper-content{
+    background-color: red;
+    height: calc(100vh - 90px);
+    flex: 1 1 auto;
+    overflow: auto;
 }
 
 .call-to-action {
     height: 90px;
     background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
+    position: sticky;
     top: 0;
     left: 0;
-    width: 100%;
+    right: 0;
+    margin-bottom: 20px;
 }
 
 .main-content {
-   height: calc(100vh - 100px);
    overflow: auto;
-   padding-top: 90px;
-   /* background-color: var(--bgd-main); */
+   flex: 1 1 auto;
 }
 
 p {
     color: white;
-}
+} 
 
 /* Footer */
 footer {
     height: 90px;
     background-color: var(--bgd-footer);
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
 }
 
 
