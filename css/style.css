@@ -110,7 +110,7 @@ a {
       padding-left: 10px;
   }
 
-  .text.wh {
+  .text.wh, .icon.wh {
     color: var(--font-white);
   }
 
@@ -135,6 +135,18 @@ a {
     padding-bottom: 10px;
   }
 
+ .line-icon {
+    position: relative;
+  }
+  
+  .line-icon::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    height: 100%;
+    width: 4px;
+    background-color: green; 
+  }
 
 /* Main */
 .upper-content{
