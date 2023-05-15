@@ -46,6 +46,10 @@ a {
   text-decoration: none;
 }
 
+.font-wh {
+  color: var(--font-white);
+}
+
 /* Debug */
 .debug .border {
     border: 2px dashed white; 
@@ -110,7 +114,7 @@ a {
       padding-left: 10px;
   }
 
-  .text.wh, .icon.wh {
+ .icon.wh {
     color: var(--font-white);
   }
 
@@ -120,7 +124,6 @@ a {
   }  
   
   .playlist > p {
-    color: white;
     font-weight: 600;
   }
   .navigation.playlist .icon {
@@ -148,9 +151,9 @@ a {
     background-color: green; 
   }
 
-/* Main */
+/* Main  */
 .upper-content{
-    background-color: red;
+    background-color: var(--bgd-main);
     height: calc(100vh - 90px);
     flex: 1 1 auto;
     overflow: auto;
@@ -165,6 +168,20 @@ a {
     right: 0;
     margin-bottom: 20px;
 }
+
+.call-to-action {
+   justify-content: flex-end;
+   align-items: center;
+   padding-right: 40px;
+}
+
+.button .wh-button {
+  color: var(--font-white);
+  border: 1px solid white;
+  padding: 10px 30px;
+  border-radius: 20px;
+}
+
 
 .main-content {
    overflow: auto;
