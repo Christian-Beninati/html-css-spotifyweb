@@ -162,7 +162,7 @@ a {
     overflow: auto;
 }
 
-.call-to-action {
+header {
     height: 90px;
     background-color: rgba(0, 0, 0, 0.5);
     position: sticky;
@@ -176,6 +176,7 @@ a {
    justify-content: flex-end;
    align-items: center;
    padding-right: 30px;
+   height: 100%;
 }
 
 .call-to-action .wh-button {
