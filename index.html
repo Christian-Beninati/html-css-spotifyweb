@@ -208,10 +208,55 @@
 
 
     <!-- Footer -->
-    <footer>
-        <div class="track-listening"></div>
-        <div class="track-bar"></div>
-        <div class="volume-bar"></div>
+    <footer class=" d-flex border">
+
+        <!-- track listening -->
+        <div class="track-listening d-flex ">
+            <img src="img/sinister.jpeg" alt="sinister">
+            <div class="track-name">
+                <h4>Sinister</h4>
+                <p>Brano Nome</p>
+            </div>
+            <div class="track-icons">
+                <i class="fa-regular fa-heart "></i>
+                <i class="fa-regular fa-folder"></i>
+            </div>
+        </div>
+
+        <!-- progress controoller -->
+        
+
+        <div class="progress-controller d-flex-col ">
+
+            <div class="control-buttons d-flex">
+                <i class="fa-solid fa-shuffle"></i>
+                <i class="fa-solid fa-backward-step"></i>
+                <i class="fa-regular fa-circle-play"></i>
+                <i class="fa-solid fa-forward-step"></i>
+                <i class="fa-solid fa-arrow-rotate-right"></i>
+            </div>
+             <div class="progress-container d-flex ">
+                  <span>0:25</span>
+                  <div class="progress-bar">
+                      <div class="progress"></div>
+                   </div>
+                   <span>4:35</span>
+            </div>
+        </div>
+        
+            
+
+        <!-- volume bar -->
+        <div class="volume-bar">
+            <div class=" volume-bar-container d-flex ">
+                <i class="fa-solid fa-list"></i>
+                <i class="fa-solid fa-display"></i>
+                <i class="fa-solid fa-volume-high"></i>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

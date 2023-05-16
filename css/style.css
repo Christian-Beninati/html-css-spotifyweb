@@ -18,6 +18,8 @@
     --font-white: #FFFFFF;
     --font-grey: #BBBCBB;
     --line-active: #ADFC2F;
+    --progress-bar: #5A5A5A;
+    --progress: #C1C1C1;
 }
 
 /* Generics */
@@ -259,8 +261,118 @@ header {
 footer {
     height: 90px;
     background-color: var(--bgd-footer);
+    color: var(--font-white);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
 }
 
+/* track listening */
+.track-listening > img {
+  width: 40px;
+  display: block;
+  margin-right: 10px;
+} 
+
+.track-listening  h4 {
+  font-size: 12px;
+}
+
+.track-listening  p {
+  font-size: 9px;
+  color: var(--font-grey);
+  font-weight: 700;
+}
+
+.track-listening i  {
+  color: var(--font-grey);
+ margin: 2px 5px;
+}
+.track-listening {
+  align-items: center;
+}
+
+.track-listening .track-icons {
+  display: flex;
+  flex-direction: column;
+}
+
+.track-listening, .volume-bar {
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.track-listening i, .volume-bar i {
+  padding: 0 5px;
+  font-size: 12px;
+}
+
+/* progress controller */
+.progress-controller {
+  flex-grow: 2;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-controller span {
+  font-size: 10px;
+}
+
+.control-buttons {
+  align-items: center;
+}
+.control-buttons i {
+  color: var(--font-white);
+  font-size: 15px;
+  padding: 0 10px;
+}
+
+.control-buttons .fa-circle-play {
+  font-size: 30px;
+}
+
+.progress-controller {
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.progress-container {
+  width: 60%;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  position: absolute;
+  bottom: 16px;
+ 
+}
+
+.progress-bar {
+  height: 4px;
+  border-radius: 10px;
+  width: 30%;
+  background-color: var(--progress-bar);
+}
+
+.progress {
+  position: relative;
+  height: 100%;
+  width: 30%;
+  border-radius: 10px;
+  background-color: var(--progress);
+}
+
+
+/* volume bar */
+
+.volume-bar .progress-bar {
+  width: 100px;
+}
+
+.volume-bar-container {
+  align-items: center;
+  justify-content: flex-end;
+}
 
  /************************************************
  RESPONSIVE S 576PX
@@ -311,6 +423,16 @@ footer {
   }
   .playlist-gallery h4 {
     font-size: 13px;
+  }
+
+  .track-listening .track-icons {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .track-listening .track-icons i {
+    padding: 0 2px;
+    font-size: 14px;
   }
  }
 
